@@ -18,7 +18,7 @@ resource "aws_elasticache_replication_group" "redis_cluster" {
   parameter_group_name          = "default.redis3.2.cluster.on"
   automatic_failover_enabled    = true
   engine_version                = "3.2"
-  subnet_group_name             = "${aws_elasticache_subnet_group.default}""
+  subnet_group_name             = "${aws_elasticache_subnet_group.default.name}"
 
   cluster_mode {
     replicas_per_node_group = 1
