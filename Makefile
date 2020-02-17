@@ -4,10 +4,7 @@ PLAN_FI=.terraform/redis-terraform-fi.tfplan
 default: help
 
 init: 
-	terraform init \
-	-backend-config="region=us-east-2" \
-	-backend-config="bucket=jw-aws-terraform-state-us-east-2" \
-	-backend-config="key=terraform/redis-terraform/terraform.tfstate"
+	terraform init 
 
 plan:
 	terraform plan \
